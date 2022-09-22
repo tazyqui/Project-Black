@@ -74,6 +74,8 @@ public class PlayerMovement : MonoBehaviour
         {
             HorizontalMovement = Input.GetAxisRaw("Horizontal");
             VerticleMovement = Input.GetAxisRaw("Vertical");
+
+           
             if (canJump)
             {
                 HandleJump();
@@ -100,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (PlayerAnimator != null)
-        {
+        {  
             HandleAnimations(HorizontalMovement, VerticleMovement);
         }
         //HandleAnimations(HorizontalMovement, VerticleMovement);
@@ -128,10 +130,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleAnimations1D(float HorizontalMovement, float VerticleMovement)
     {
+        
         bool MovementInputDetected = (HorizontalMovement != 0 || VerticleMovement != 0);
         if (MovementInputDetected)
         {
             PlayerAnimator.SetBool("isMoving", true);
+            
         }
         else
         {
