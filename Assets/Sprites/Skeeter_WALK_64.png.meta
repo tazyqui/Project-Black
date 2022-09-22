@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6bc6097f4f35e42439aceaa222e14886
+guid: f0655ac4f52bdf74c99a5e36a2070e6c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -71,7 +71,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spaceman_64_idle_0
+      name: Skeeter_WALK_64_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 754c765ecf993d247a5739145e979a62
-      internalID: 158014585
+      spriteID: 0bbb8a19865ecff46a3cac524009d1c0
+      internalID: 1511814274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spaceman_64_idle_1
+      name: Skeeter_WALK_64_1
       rect:
         serializedVersion: 2
         x: 64
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a3574e698886c2498728be920dfe10c
-      internalID: 727687331
+      spriteID: 3effd180b36ae5c4aae4585ffc5e1ce0
+      internalID: 891643041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spaceman_64_idle_2
+      name: Skeeter_WALK_64_2
       rect:
         serializedVersion: 2
         x: 128
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bebb7494a498a9e4193ff4904c305290
-      internalID: 1503180788
+      spriteID: 7c1bc6293fcba2c43b0125af974f7cd7
+      internalID: -896965818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spaceman_64_idle_3
+      name: Skeeter_WALK_64_3
       rect:
         serializedVersion: 2
         x: 192
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 085fd94c5dbbf7542abe7f76d142d9c1
-      internalID: 1801990730
+      spriteID: f6574c55b6de387489c142b09e2fd1a7
+      internalID: 1082753945
       vertices: []
       indices: 
       edges: []
@@ -201,10 +201,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spaceman_64_idle_3: 1801990730
-      spaceman_64_idle_2: 1503180788
-      spaceman_64_idle_0: 158014585
-      spaceman_64_idle_1: 727687331
+      Skeeter_WALK_64_2: -896965818
+      Skeeter_WALK_64_0: 1511814274
+      Skeeter_WALK_64_1: 891643041
+      Skeeter_WALK_64_3: 1082753945
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
