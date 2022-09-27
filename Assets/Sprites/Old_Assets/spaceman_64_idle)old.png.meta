@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1aeeb1a75c2759e4fa8c209a1ce59744
+guid: 6bc6097f4f35e42439aceaa222e14886
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -71,7 +71,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spaceman_64_IDLE_0
+      name: spaceman_64_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbcffa01e69ebe240828a69e1035344c
-      internalID: 1038845966
+      spriteID: 754c765ecf993d247a5739145e979a62
+      internalID: 158014585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spaceman_64_IDLE_1
+      name: spaceman_64_idle_1
       rect:
         serializedVersion: 2
         x: 64
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5a4bb138d7bdf34e8af2bb16339dfb9
-      internalID: -1407227983
+      spriteID: 9a3574e698886c2498728be920dfe10c
+      internalID: 727687331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spaceman_64_IDLE_2
+      name: spaceman_64_idle_2
       rect:
         serializedVersion: 2
         x: 128
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf66bc575cd2f5546a51ef2407a65fb8
-      internalID: -1745985164
+      spriteID: bebb7494a498a9e4193ff4904c305290
+      internalID: 1503180788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spaceman_64_IDLE_3
+      name: spaceman_64_idle_3
       rect:
         serializedVersion: 2
         x: 192
@@ -184,92 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c257699702f8ec40889b9f5b7b95466
-      internalID: 2133324187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceman_64_IDLE_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f777d21d7a8cb084cbc16e45a76a074e
-      internalID: 1832676322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceman_64_IDLE_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b674a2d915432e4db1ca5fa238ef012
-      internalID: 799647527
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceman_64_IDLE_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abf8afee3cf3a334a8e757d70c4fcb19
-      internalID: -1699656757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceman_64_IDLE_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34b7d9621fd57f349871075a5066fb77
-      internalID: 356781614
+      spriteID: 085fd94c5dbbf7542abe7f76d142d9c1
+      internalID: 1801990730
       vertices: []
       indices: 
       edges: []
@@ -285,14 +201,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spaceman_64_IDLE_2: -1745985164
-      spaceman_64_IDLE_6: -1699656757
-      spaceman_64_IDLE_1: -1407227983
-      spaceman_64_IDLE_7: 356781614
-      spaceman_64_IDLE_5: 799647527
-      spaceman_64_IDLE_0: 1038845966
-      spaceman_64_IDLE_3: 2133324187
-      spaceman_64_IDLE_4: 1832676322
+      spaceman_64_idle_3: 1801990730
+      spaceman_64_idle_2: 1503180788
+      spaceman_64_idle_0: 158014585
+      spaceman_64_idle_1: 727687331
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
