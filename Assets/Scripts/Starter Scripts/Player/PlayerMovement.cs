@@ -124,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             HandleAnimations1D(HorizontalMovement, VerticleMovement);
-            HandlePlayerOrientation(HorizontalMovement);
+            //HandlePlayerOrientation(HorizontalMovement);
         }
     }
 
