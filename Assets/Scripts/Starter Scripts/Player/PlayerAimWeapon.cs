@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -5,21 +6,37 @@ using UnityEngine;
 //Script Credit: CodeMonkey
 public class PlayerAimWeapon : MonoBehaviour
 {
+    public event EventHandler<OnShootEventArgs> OnShoot;
+    public class OnShootEventArgs : EventArgs
+    {
+        public Vector3 gunEndPointPosition;
+        public Vector3 shootPosition;
+    }
+
     private Transform aimTransform;
+    private Transform aimGunEndPointTransform;
     private Transform playerTransform;
 
-    private bool facingRight = true;
+    public float fireRate = 2f;
+    private float timeStamp;
 
     private void Awake() 
     {
         aimTransform = transform.Find("Aim");
         playerTransform = gameObject.transform;
+        aimGunEndPointTransform = aimTransform.Find("GunEndPointPosition");
     }
     // Update is called once per frame
     private void Update()
     {
+        HandleCrosshair();
         HandleAiming();    
         HandleShooting();
+    }
+
+    private void HandleCrosshair() 
+    {
+        Cursor cursor;
     }
 
     private void HandleAiming() 
@@ -70,9 +87,20 @@ public class PlayerAimWeapon : MonoBehaviour
 
     private void HandleShooting() 
     {
-        if (Input.GetMouseButton(0)) 
-        { 
-            
+        Collider2D playerCollider = gameObject.GetComponent<Collider2D>();
+
+        Vector3 mousePosition = GetMouseWorldPosition(Input.mousePosition, Camera.main);
+
+        float firingCooldown = 1/fireRate;
+
+        if (Input.GetMouseButton(0) && !playerCollider.OverlapPoint(mousePosition) && timeStamp <= Time.time)
+        {          
+            OnShoot?.Invoke(this, new OnShootEventArgs
+            {
+                gunEndPointPosition = aimGunEndPointTransform.position,
+                shootPosition = mousePosition,
+            });
+            timeStamp = Time.time + firingCooldown;
         }
     }
 
