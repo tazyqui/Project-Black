@@ -157,4 +157,4 @@ MonoBehaviour:
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   isRight: 1
-  speed: 0.07
+  speed: 0.007
