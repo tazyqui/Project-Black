@@ -2920,6 +2920,7 @@ GameObject:
   - component: {fileID: 334035540}
   - component: {fileID: 334035543}
   - component: {fileID: 334035544}
+  - component: {fileID: 334035545}
   m_Layer: 0
   m_Name: Enemy_Skeeter_01
   m_TagString: Enemy
@@ -3046,8 +3047,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c259f5eb5ac2414a82aa059e05bb479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 10
+  currentHealth: 10
+--- !u!114 &334035545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334035539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1c899a1faba624481d46cbe9fed702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
+  isRight: 1
+  speed: 0.07
 --- !u!1 &341733725
 GameObject:
   m_ObjectHideFlags: 0
