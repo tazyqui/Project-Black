@@ -35,6 +35,9 @@ public class PlayerHealth : MonoBehaviour
     public bool useHealthBar = false;
 
     private PlayerMovement playerMovement;
+    public Animator PlayerAnimator;
+    public GameManager gm;
+    public GameSceneManager gsm;
 
     void Start()
     {
@@ -186,7 +189,7 @@ public class PlayerHealth : MonoBehaviour
                     DecreaseHealth(damageValues.DamageValue);
                     if (currentHealth == 0)
                     {
-                        playerMovement.TimeToDie();
+                        TimeToDie();
                     }
                 }
             }
@@ -214,7 +217,7 @@ public class PlayerHealth : MonoBehaviour
                     DecreaseHealth(damageValues.DamageValue);
                     if (currentHealth == 0)
                     {
-                        playerMovement.TimeToDie();
+                        TimeToDie();
                     }
                 }
             }
@@ -228,5 +231,33 @@ public class PlayerHealth : MonoBehaviour
             }
         }
 
+    }
+
+    public void TimeToDie() //This isn't used in this script, but rather called elsewhere
+    {
+        StartCoroutine(deathOccurance());
+    }
+
+    IEnumerator deathOccurance()
+    {
+        if (gm != null && gsm != null)
+        {
+            PlayerAnimator.SetBool("isDead", true);
+            playerMovement.disabled = true;
+            yield return new WaitForSeconds(1f);
+            StartCoroutine(gsm.FadeOut());
+
+            yield return new WaitForSeconds(1f);
+            gm.Respawn(gameObject);
+            StartCoroutine(gsm.FadeIn());
+            yield return new WaitForSeconds(1f);
+            GetComponent<PlayerHealth>().ResetHealth();
+            playerMovement.disabled = false;
+            PlayerAnimator.SetBool("isDead", false);
+        }
+        else
+        {
+            Debug.Log("Game Manager or Game Scene Manager not assigned on player!");
+        }
     }
 }

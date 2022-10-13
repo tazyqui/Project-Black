@@ -20,23 +20,27 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
-
-        if (Input.GetButtonDown("Jump"))
+        if (!disabled) 
         {
-            jump = true;
-        }
+            horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
 
-        if (Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
+            if (Input.GetButtonDown("Jump"))
+            {
+                jump = true;
+            }
 
-            Debug.Log("crouch");
+            if (Input.GetButtonDown("Crouch"))
+            {
+                crouch = true;
+
+                Debug.Log("crouch");
+            }
+            else if (Input.GetButtonUp("Crouch"))
+            {
+                crouch = false;
+            }
         }
-        else if (Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
-        }
+       
 
 
     }
@@ -48,9 +52,5 @@ public class PlayerMovement : MonoBehaviour
         jump = false;
     }
 
-    public void TimeToDie() 
-    {
-    
-    }
 }
 
