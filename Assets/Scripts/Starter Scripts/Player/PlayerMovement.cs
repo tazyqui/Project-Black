@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -6,6 +7,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
+
+    public Animator animator;
 
     public float moveSpeed = 40f;
 
@@ -20,9 +23,17 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!disabled) 
+        HandleMovement();
+        
+    }
+
+    private void HandleMovement() 
+    {
+        if (!disabled)
         {
             horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
+            
+            HandleHorizontalAnimation(horizontalMove);
 
             if (Input.GetButtonDown("Jump"))
             {
@@ -40,9 +51,15 @@ public class PlayerMovement : MonoBehaviour
                 crouch = false;
             }
         }
-       
+        else
+        {
+            horizontalMove = 0f;
+        }
+    }
 
-
+    private void HandleHorizontalAnimation(float horizontalMove)
+    {
+        animator.SetFloat("Speed", MathF.Abs(horizontalMove));
     }
 
     private void FixedUpdate()
