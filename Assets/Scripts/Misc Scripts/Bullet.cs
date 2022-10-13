@@ -29,7 +29,6 @@ public class Bullet : MonoBehaviour
 
         //Only works for 1 enemy rn
         GameObject enemy_test = GameObject.FindGameObjectWithTag("Enemy");
-        Collider2D enemy_collider = enemy_test.GetComponent<Collider2D>();
 
         if (enemy_test != null)
         {
