@@ -6,6 +6,8 @@ public class EnemyChase : MonoBehaviour
 {
     private Transform targetPlayer;
     public float speed;
+    int MaxDist = 15;
+    int MinDist = 5;
 
     void Start()
     {
@@ -14,7 +16,10 @@ public class EnemyChase : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, targetPlayer.position, speed * Time.deltaTime);
+        if (Vector3.Distance(transform.position, targetPlayer.position) <= MaxDist)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, targetPlayer.position, speed * Time.deltaTime);
+        }
 
         if (transform.position.x < targetPlayer.position.x)
         {

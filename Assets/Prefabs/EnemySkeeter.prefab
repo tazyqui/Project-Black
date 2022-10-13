@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3952446677895044836}
   - component: {fileID: 3952446677895044839}
   - component: {fileID: 3952446677895044840}
-  - component: {fileID: -6184142799640841776}
+  - component: {fileID: -2501095997786130188}
   m_Layer: 0
   m_Name: EnemySkeeter
   m_TagString: Enemy
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
---- !u!114 &-6184142799640841776
+--- !u!114 &-2501095997786130188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
