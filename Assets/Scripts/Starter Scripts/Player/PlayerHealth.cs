@@ -244,13 +244,13 @@ public class PlayerHealth : MonoBehaviour
         {
             PlayerAnimator.SetBool("isDead", true);
             playerMovement.disabled = true;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.1f);
             StartCoroutine(gsm.FadeOut());
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.1f);
             gm.Respawn(gameObject);
             StartCoroutine(gsm.FadeIn());
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.1f);
             GetComponent<PlayerHealth>().ResetHealth();
             playerMovement.disabled = false;
             PlayerAnimator.SetBool("isDead", false);
