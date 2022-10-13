@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3952446677895044836}
   - component: {fileID: 3952446677895044839}
   - component: {fileID: 3952446677895044840}
-  - component: {fileID: 1734810498480958172}
+  - component: {fileID: -6184142799640841776}
   m_Layer: 0
   m_Name: EnemySkeeter
   m_TagString: Enemy
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4966220928747875860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -44.37342, y: 21.40134, z: -3.172434}
-  m_LocalScale: {x: -2.124987, y: 2.1719, z: 2.1719}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 1511814274, guid: f0655ac4f52bdf74c99a5e36a2070e6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.64, y: 0.64}
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
---- !u!114 &1734810498480958172
+--- !u!114 &-6184142799640841776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,10 +151,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4966220928747875860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b1c899a1faba624481d46cbe9fed702, type: 3}
+  m_Script: {fileID: 11500000, guid: f66519248d4137942a801565be41e577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {fileID: 0}
-  pointB: {fileID: 0}
-  isRight: 1
-  speed: 0.007
+  speed: 3
