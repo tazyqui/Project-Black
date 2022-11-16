@@ -983,7 +983,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 44c6e1da35c841f4cbb50d7af8d8587c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1024,7 +1024,7 @@ GameObject:
   - component: {fileID: 523306207}
   - component: {fileID: 523306209}
   - component: {fileID: 523306208}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mid_Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1112,7 +1112,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
@@ -50333,6 +50333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1212652556}
   - component: {fileID: 1212652555}
+  - component: {fileID: 1212652557}
   m_Layer: 0
   m_Name: skull_Boss_sprite
   m_TagString: Untagged
@@ -50380,7 +50381,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 2df687239e30bb0438f270a56cd8c62e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -50407,6 +50408,21 @@ Transform:
   m_Father: {fileID: 2081011116}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1212652557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212652554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ebe6c80f22dd44180702e0239dbefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 0
+  amplitude: 0.5
+  frequency: 0.5
 --- !u!1 &1262864488
 GameObject:
   m_ObjectHideFlags: 0
@@ -50477,7 +50493,7 @@ GameObject:
   - component: {fileID: 1270705962}
   - component: {fileID: 1270705964}
   - component: {fileID: 1270705963}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lower_Mid_Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50565,7 +50581,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
@@ -50696,6 +50712,7 @@ GameObject:
   - component: {fileID: 1389801481}
   - component: {fileID: 1389801480}
   - component: {fileID: 1389801482}
+  - component: {fileID: 1389801483}
   m_Layer: 0
   m_Name: Boss_Portal
   m_TagString: Untagged
@@ -50777,7 +50794,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ec2886ef94326854e83278ef2145435c, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -50807,6 +50824,21 @@ MonoBehaviour:
   maxDistance: 25
   target: {fileID: 442453928}
   myTransform: {fileID: 1389801479}
+--- !u!114 &1389801483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389801478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ebe6c80f22dd44180702e0239dbefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 0
+  amplitude: 0.5
+  frequency: 0.5
 --- !u!1 &1528862872
 GameObject:
   m_ObjectHideFlags: 0
@@ -50818,7 +50850,7 @@ GameObject:
   - component: {fileID: 1528862873}
   - component: {fileID: 1528862875}
   - component: {fileID: 1528862874}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Upper_Left_Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50906,7 +50938,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
@@ -50929,7 +50961,7 @@ GameObject:
   - component: {fileID: 1547651273}
   - component: {fileID: 1547651275}
   - component: {fileID: 1547651274}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lower_Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51017,7 +51049,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
@@ -51321,7 +51353,7 @@ GameObject:
   - component: {fileID: 1972126526}
   - component: {fileID: 1972126528}
   - component: {fileID: 1972126527}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Upper_Right_Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51409,7 +51441,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
