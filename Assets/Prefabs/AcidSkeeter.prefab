@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 3952446677895044840}
   - component: {fileID: -2501095997786130188}
   - component: {fileID: 1981183432927228592}
+  - component: {fileID: 339275235}
   m_Layer: 0
-  m_Name: EnemySkeeter
+  m_Name: AcidSkeeter
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,13 +30,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4966220928747875860}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -44.37342, y: 21.40134, z: -3.172434}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.9999613, y: 1.9999613, z: 1.9999613}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3952446677895044837
 SpriteRenderer:
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 1511814274, guid: f0655ac4f52bdf74c99a5e36a2070e6c, type: 3}
+  m_Sprite: {fileID: 683959454, guid: 757760c2fe0c9604099d1a9d55b59e44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -106,7 +107,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 0.56, y: 0.52}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -127,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b921c7967f979c4f8a0b583f319b2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageValue: 10
+  DamageValue: 5
   damageType: 1
 --- !u!114 &3952446677895044840
 MonoBehaviour:
@@ -155,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f66519248d4137942a801565be41e577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 1
 --- !u!95 &1981183432927228592
 Animator:
   serializedVersion: 4
@@ -166,7 +167,7 @@ Animator:
   m_GameObject: {fileID: 4966220928747875860}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e0e8ea59c9e78d54cbc3ff6ef8bd9066, type: 2}
+  m_Controller: {fileID: 9100000, guid: 117b85e93e7931f498b97f73e207fec8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -176,3 +177,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &339275235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4966220928747875860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f952207a26e894f9c19cbbd389d3ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTime: 1.2
+  projectile: {fileID: 895015431412357022, guid: 342038ea8ad0aec4d98c5b1cc7a7733b, type: 3}

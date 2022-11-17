@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 3952446677895044840}
   - component: {fileID: -2501095997786130188}
   - component: {fileID: 1981183432927228592}
-  m_Layer: 0
-  m_Name: EnemySkeeter
+  m_Layer: 7
+  m_Name: FastSkeeter
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1511814274, guid: f0655ac4f52bdf74c99a5e36a2070e6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c259f5eb5ac2414a82aa059e05bb479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 5
+  currentHealth: 5
 --- !u!114 &-2501095997786130188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f66519248d4137942a801565be41e577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 7
 --- !u!95 &1981183432927228592
 Animator:
   serializedVersion: 4

@@ -12,7 +12,7 @@ public class DamageDealer : MonoBehaviour
     {
         Player,
         Enemy,
-        Environment
+        Environment,
     }
 
     [Tooltip("This is the damage source")]
