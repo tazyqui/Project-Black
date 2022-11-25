@@ -6,8 +6,8 @@ public class EnemyChase : MonoBehaviour
 {
     private Transform targetPlayer;
     public float speed;
-    int MaxDist = 15;
-    int MinDist = 5;
+    public int MaxDist = 15;
+    public int MinDist = 5;
 
     void Start()
     {

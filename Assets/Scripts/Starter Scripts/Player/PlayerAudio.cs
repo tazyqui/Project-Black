@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAudio : MonoBehaviour
 {
-    //Here is where you can add more Audioclips if you want 
+    //Here is where you can add more Audioclips if you want
     [Header("Audio Clips for the Player")]
     public AudioClip WalkAudioClip;
     public bool LoopWalkAudio = false;
@@ -50,7 +50,7 @@ public class PlayerAudio : MonoBehaviour
         WalkSource = WalkGameObject.AddComponent<AudioSource>();
         AttackSource = AttackGameObject.AddComponent<AudioSource>();
         DeathSource = DeathGameObject.AddComponent<AudioSource>();
-        JumpSource = DeathGameObject.AddComponent<AudioSource>();
+        JumpSource = JumpGameObject.AddComponent<AudioSource>();
         //And finally you assign the clip to the audio source
         WalkSource.clip = WalkAudioClip;
         AttackSource.clip = AttackAudioClip;

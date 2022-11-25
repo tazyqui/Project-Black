@@ -17,6 +17,7 @@ public class CharacterController2D : MonoBehaviour
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
 	private Rigidbody2D m_Rigidbody2D;
 	private Vector3 m_Velocity = Vector3.zero;
+	public int jumps = 2;
 
 	[Header("Events")]
 	[Space]
@@ -53,6 +54,7 @@ public class CharacterController2D : MonoBehaviour
 			if (colliders[i].gameObject != gameObject)
 			{
 				m_Grounded = true;
+				jumps = 2;
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
 			}
@@ -111,11 +113,13 @@ public class CharacterController2D : MonoBehaviour
 
 		}
 		// If the player should jump...
-		if (m_Grounded && jump)
+		if (/*m_Grounded && jump*/ jump && jumps > 0)
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;
+			jumps -= 1;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			gameObject.transform.GetChild(6).gameObject.GetComponent<AudioSource>().Play();
 		}
 	}
 }

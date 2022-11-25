@@ -20,7 +20,7 @@ public class PlayerAimWeapon : MonoBehaviour
     public float fireRate = 2f;
     private float timeStamp;
 
-    private void Awake() 
+    private void Awake()
     {
         aimTransform = transform.Find("Aim");
         playerTransform = gameObject.transform;
@@ -29,17 +29,21 @@ public class PlayerAimWeapon : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        aimTransform = transform.Find("Aim");
+        playerTransform = gameObject.transform;
+        aimGunEndPointTransform = aimTransform.Find("GunEndPointPosition");
         HandleCrosshair();
-        HandleAiming();    
+        HandleAiming();
         HandleShooting();
+        //gameObject.transform.GetChild(4).gameObject.GetComponent<AudioSource>().Play();
     }
 
-    private void HandleCrosshair() 
+    private void HandleCrosshair()
     {
         Cursor cursor;
     }
 
-    private void HandleAiming() 
+    private void HandleAiming()
     {
         Vector3 aimMousePosition = GetMouseWorldPosition(Input.mousePosition, Camera.main);
 
@@ -47,7 +51,7 @@ public class PlayerAimWeapon : MonoBehaviour
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         aimTransform.eulerAngles = new Vector3(0, 0, angle);
         //Debug.Log(angle);
-        
+
         HandlePlayerOrientation(angle);
 
         Vector3 aimLocalScale = Vector3.one;
@@ -70,7 +74,7 @@ public class PlayerAimWeapon : MonoBehaviour
         return vec;
     }
 
-    private void HandlePlayerOrientation(float angle) 
+    private void HandlePlayerOrientation(float angle)
     {
         Vector3 playerRotation = playerTransform.eulerAngles;
 
@@ -85,7 +89,7 @@ public class PlayerAimWeapon : MonoBehaviour
         playerTransform.eulerAngles = playerRotation;
     }
 
-    private void HandleShooting() 
+    private void HandleShooting()
     {
         Collider2D playerCollider = gameObject.GetComponent<Collider2D>();
 
@@ -94,17 +98,18 @@ public class PlayerAimWeapon : MonoBehaviour
         float firingCooldown = 1/fireRate;
 
         if (Input.GetMouseButton(0) && !playerCollider.OverlapPoint(mousePosition) && timeStamp <= Time.time)
-        {          
+        {
             OnShoot?.Invoke(this, new OnShootEventArgs
             {
                 gunEndPointPosition = aimGunEndPointTransform.position,
                 shootPosition = mousePosition,
             });
+
             timeStamp = Time.time + firingCooldown;
         }
     }
 
-    
+
 
 
 }
