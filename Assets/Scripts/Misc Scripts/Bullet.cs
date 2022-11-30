@@ -33,6 +33,7 @@ public class Bullet : MonoBehaviour
         if (collider.CompareTag("Enemy")) {
           Destroy(gameObject);
           enemy_test.GetComponent<EnemyHealth>().DecreaseHealth(5);
+          collider.GetComponentInChildren<HealthBar>().hp -= 5;
         }
         else if (collider.CompareTag("Terrain")) {
           Destroy(gameObject);
