@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_1_Boss.unity
     guid: 3632cff2ebd40c24eaef51d47f2df7f4
+  - enabled: 1
+    path: Assets/Scenes/Credit_Screen.unity
+    guid: 9af8f1e465ddec04fb50de0f57d3ca8f
   m_configObjects: {}

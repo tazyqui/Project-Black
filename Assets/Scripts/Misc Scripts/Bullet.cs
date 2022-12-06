@@ -25,15 +25,13 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
 
-
-        //Only works for 1 enemy rn
         GameObject enemy_test = GameObject.FindGameObjectWithTag("Enemy");
         GameObject wall_test = GameObject.FindGameObjectWithTag("Terrain");
 
         if (collider.CompareTag("Enemy")) {
           Destroy(gameObject);
           enemy_test.GetComponent<EnemyHealth>().DecreaseHealth(5);
-          collider.GetComponentInChildren<HealthBar>().hp -= 5;
+          //collider.GetComponentInChildren<HealthBar>().hp -= 5;
         }
         else if (collider.CompareTag("Terrain")) {
           Destroy(gameObject);
