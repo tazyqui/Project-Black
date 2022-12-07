@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class AudioManager : MonoBehaviour {
   public AudioClip defaultAmbience;
 
@@ -70,6 +71,7 @@ public class AudioManager : MonoBehaviour {
        timeElapsed += Time.deltaTime;
        yield return null;
      }
+     isPlayingTrack03 = true;
      //track04.Stop();
    }
  }
@@ -108,6 +110,7 @@ public void SwapTrack(AudioClip newClip, float timeToFade=0.25f, float volume=1)
         track01.volume = Mathf.Lerp(0, volume, timeElapsed/timeToFade);
         track02.volume = Mathf.Lerp(volume, 0, timeElapsed/timeToFade);
         timeElapsed += Time.deltaTime;
+        isPlayingTrack01 = true;
         yield return null;
       }
       track02.Stop();

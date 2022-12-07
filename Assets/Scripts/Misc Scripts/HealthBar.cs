@@ -11,12 +11,15 @@ public class HealthBar : MonoBehaviour
     [HideInInspector]public float hp;
     public float maxHp;
     public float hurtSpeed = 0.005f;
+    public GameObject EnemyEntity;
 
     private void Start() {
-      hp = maxHp;
+      //hp = maxHp;
+      hp = EnemyEntity.GetComponent<EnemyHealth>().maxHealth;
     }
 
     private void Update() {
+      hp = EnemyEntity.GetComponent<EnemyHealth>().currentHealth;
       hpImage.fillAmount = hp/maxHp;
 
       if (hpEffectImage.fillAmount > hpImage.fillAmount)  {

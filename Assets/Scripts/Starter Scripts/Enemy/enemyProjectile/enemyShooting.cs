@@ -8,7 +8,7 @@ public class enemyShooting : MonoBehaviour
     private Transform targetPlayer;
     public float startTime;
     public GameObject projectile;
-    int MaxDist = 25;
+    public int MaxDist = 25;
     int MinDist = 1;
     // Start is called before the first frame update
     void Start()

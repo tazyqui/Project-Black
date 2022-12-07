@@ -17,7 +17,8 @@ public class CharacterController2D : MonoBehaviour
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
 	private Rigidbody2D m_Rigidbody2D;
 	private Vector3 m_Velocity = Vector3.zero;
-	public int jumps = 2;
+	//public int jumps = 1;
+	private bool doubleJump;
 
 	[Header("Events")]
 	[Space]
@@ -54,7 +55,7 @@ public class CharacterController2D : MonoBehaviour
 			if (colliders[i].gameObject != gameObject)
 			{
 				m_Grounded = true;
-				jumps = 2;
+				//jumps = 2;
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
 			}
@@ -112,8 +113,10 @@ public class CharacterController2D : MonoBehaviour
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
 		}
+
 		// If the player should jump...
-		if (/*m_Grounded && jump*/ jump && jumps > 0)
+		//if (/*m_Grounded && jump*/ jump && jumps > 0)
+		/*
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;
@@ -121,5 +124,20 @@ public class CharacterController2D : MonoBehaviour
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 			gameObject.transform.GetChild(6).gameObject.GetComponent<AudioSource>().Play();
 		}
+		*/
+
+		if (m_Grounded && !Input.GetButton("Jump")) {
+			doubleJump = false;
+		}
+		if (jump) {
+			if (m_Grounded || doubleJump) {
+				m_Grounded = false;
+				m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 19f);
+				doubleJump = !doubleJump;
+				gameObject.transform.GetChild(6).gameObject.GetComponent<AudioSource>().Play();
+			}
+		}
+
+
 	}
 }

@@ -8,11 +8,14 @@ public class EnemyHealth : MonoBehaviour
     public int maxHealth = 100;
 
     public int currentHealth;
+    public AudioClip deathSound1, deathSound2;
+    [HideInInspector]public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        audioSource = GameObject.FindWithTag("SkeeterDeath").GetComponent<AudioSource>();
     }
 
     public void DecreaseHealth(int value)
@@ -33,8 +36,24 @@ public class EnemyHealth : MonoBehaviour
                 DecreaseHealth(damageValues.DamageValue);
                 if (currentHealth == 0)
                 {
-                    Destroy(this.gameObject);//If this enemy reaches 0 health, they are straight up destroyed. 
+
+                  int random = UnityEngine.Random.Range(0, 2);
+                  if (random == 0) {
+                    audioSource.PlayOneShot(deathSound1);
+                  }
+                  else {
+                    audioSource.PlayOneShot(deathSound2);
+                  }
+
+                  Destroy(this.gameObject);//If this enemy reaches 0 health, they are straight up destroyed.
                     //If you want something fancy like an animation or the like, you can try to implement it here
+                  //audioSource.PlayOneShot(deathSound1);
+
+
+
+
+
+
                 }
             }
         }

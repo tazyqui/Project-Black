@@ -51,6 +51,7 @@ public class PlayerDash : MonoBehaviour
             {
                 // Whatever you want.
             }
+            gameObject.transform.GetChild(7).gameObject.GetComponent<AudioSource>().Play();
 
         }
     }

@@ -14,6 +14,8 @@ public class PlayerAudio : MonoBehaviour
     public bool LoopDeathAudio = false;
     public AudioClip JumpAudioClip;
     public bool LoopJumpAudio = false;
+    public AudioClip DashAudioClip;
+    public bool LoopDashAudio = false;
 
     [Range(0,1)]
     public float VolumeLevel = 1;
@@ -24,6 +26,7 @@ public class PlayerAudio : MonoBehaviour
     [HideInInspector] public AudioSource AttackSource;
     [HideInInspector] public AudioSource DeathSource;
     [HideInInspector] public AudioSource JumpSource;
+    [HideInInspector] public AudioSource DashSource;
     //The whole [HideInInspector] thing just makes it so that way you can't see these public variables in editor
 
     void Start()
@@ -39,34 +42,40 @@ public class PlayerAudio : MonoBehaviour
         GameObject AttackGameObject = new GameObject("AttackAudioSource");
         GameObject DeathGameObject = new GameObject("DeathAudioSource");
         GameObject JumpGameObject = new GameObject("JumpAudioSource");
+        GameObject DashGameObject = new GameObject("DashAudioSource");
 
         //Next you have to Assign the parent so it's all organized
         AssignParent(WalkGameObject);
         AssignParent(AttackGameObject);
         AssignParent(DeathGameObject);
         AssignParent(JumpGameObject);
+        AssignParent(DashGameObject);
 
         //Then you have to add the actual audiosource to each gameobject
         WalkSource = WalkGameObject.AddComponent<AudioSource>();
         AttackSource = AttackGameObject.AddComponent<AudioSource>();
         DeathSource = DeathGameObject.AddComponent<AudioSource>();
         JumpSource = JumpGameObject.AddComponent<AudioSource>();
+        DashSource = DashGameObject.AddComponent<AudioSource>();
         //And finally you assign the clip to the audio source
         WalkSource.clip = WalkAudioClip;
         AttackSource.clip = AttackAudioClip;
         DeathSource.clip = DeathAudioClip;
         JumpSource.clip = JumpAudioClip;
+        DashSource.clip = DashAudioClip;
 
         //And here is just where we assign the global volume level, you can make these individualized if you want
         WalkSource.volume = VolumeLevel;
         AttackSource.volume = VolumeLevel;
         DeathSource.volume = VolumeLevel;
         JumpSource.volume = VolumeLevel;
+        DashSource.volume = 0.2f;
 
         WalkSource.loop = LoopWalkAudio;
         AttackSource.loop = LoopAttackAudio;
         DeathSource.loop = LoopDeathAudio;
         JumpSource.loop = LoopJumpAudio;
+        DashSource.loop = LoopDashAudio;
     }
 
     //Just a helper function that assigns whatever object as a child of this gameObject

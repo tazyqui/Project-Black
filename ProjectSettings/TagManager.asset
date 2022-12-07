@@ -9,6 +9,7 @@ TagManager:
   - SceneManager
   - Terrain
   - Persistent
+  - SkeeterDeath
   layers:
   - Default
   - TransparentFX

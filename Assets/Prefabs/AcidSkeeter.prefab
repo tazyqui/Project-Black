@@ -144,6 +144,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
+  deathSound1: {fileID: 8300000, guid: 1e2baed8c5a7da5458e062bda97e35f5, type: 3}
+  deathSound2: {fileID: 8300000, guid: 11fb0b7dc905c0441ae295f478a911e1, type: 3}
+  audioSource: {fileID: 0}
 --- !u!114 &-2501095997786130188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  MaxDist: 15
+  MinDist: 5
 --- !u!95 &1981183432927228592
 Animator:
   serializedVersion: 4
@@ -191,3 +196,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 1.2
   projectile: {fileID: 895015431412357022, guid: 342038ea8ad0aec4d98c5b1cc7a7733b, type: 3}
+  MaxDist: 25
