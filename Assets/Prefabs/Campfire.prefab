@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7443602054769823197}
   - component: {fileID: 7443602054769823196}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7443602055092548007}
   - component: {fileID: 7443602055092548006}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7443602055583581146}
   - component: {fileID: 7443602055583581149}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,8 @@ GameObject:
   - component: {fileID: 7443602056094553600}
   - component: {fileID: 7443602056094553602}
   - component: {fileID: 7443602056094553603}
-  m_Layer: 0
+  - component: {fileID: 1764340079422389993}
+  m_Layer: 7
   m_Name: Campfire
   m_TagString: Respawn
   m_Icon: {fileID: 0}
@@ -327,6 +328,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48f31c07bd375f242b99109e0da54e6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1764340079422389993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7443602056094553601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2122984cbf7af0148b7a06eac6dfe952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealAmount: 100
+  DestroyOnContact: 0
 --- !u!1 &7443602056625208068
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7443602056625208071}
   - component: {fileID: 7443602056625208070}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
