@@ -33,7 +33,6 @@ public class AudioManager : MonoBehaviour {
     track04 = gameObject.AddComponent<AudioSource>();
     track04.loop = true;
 
-
     SwapTrack(defaultAmbience);
 
   }
@@ -116,6 +115,8 @@ public void SwapTrack(AudioClip newClip, float timeToFade=0.25f, float volume=1)
       track02.Stop();
     }
   }
+
+
 
 
 }
