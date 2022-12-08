@@ -242,7 +242,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (gm != null && gsm != null)
         {
-            PlayerAnimator.SetBool("isDead", true);
+            //PlayerAnimator.SetBool("isDead", true);
             playerMovement.disabled = true;
             yield return new WaitForSeconds(0.1f);
             StartCoroutine(gsm.FadeOut());
@@ -253,7 +253,7 @@ public class PlayerHealth : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             GetComponent<PlayerHealth>().ResetHealth();
             playerMovement.disabled = false;
-            PlayerAnimator.SetBool("isDead", false);
+            //PlayerAnimator.SetBool("isDead", false);
         }
         else
         {

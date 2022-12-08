@@ -20636,7 +20636,7 @@ MonoBehaviour:
   hpImage: {fileID: 1984753726}
   hpEffectImage: {fileID: 1435725127}
   hp: 0
-  maxHp: 1000
+  maxHp: 1800
   hurtSpeed: 0.005
   EnemyEntity: {fileID: 1212652554}
 --- !u!1 &567722299
@@ -70722,8 +70722,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c259f5eb5ac2414a82aa059e05bb479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
-  currentHealth: 1000
+  maxHealth: 1800
+  currentHealth: 1800
   deathSound1: {fileID: 0}
   deathSound2: {fileID: 0}
   audioSource: {fileID: 0}
@@ -71321,7 +71321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelIndex: 3
-  useGameSceneManager: 1
+  useGameSceneManager: 0
 --- !u!58 &1389801485
 CircleCollider2D:
   m_ObjectHideFlags: 0
