@@ -533,13 +533,16 @@ MonoBehaviour:
   LoopAttackAudio: 0
   DeathAudioClip: {fileID: 0}
   LoopDeathAudio: 0
-  JumpAudioClip: {fileID: 0}
+  JumpAudioClip: {fileID: 8300000, guid: 776e08de21bfde84cb3009f43453d1c6, type: 3}
   LoopJumpAudio: 0
+  DashAudioClip: {fileID: 8300000, guid: 364ae4298addb214fb4ff77861ef1bcc, type: 3}
+  LoopDashAudio: 0
   VolumeLevel: 1
   WalkSource: {fileID: 0}
   AttackSource: {fileID: 0}
   DeathSource: {fileID: 0}
   JumpSource: {fileID: 0}
+  DashSource: {fileID: 0}
 --- !u!1 &6953156542851780656
 GameObject:
   m_ObjectHideFlags: 0
